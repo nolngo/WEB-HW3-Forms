@@ -6,8 +6,20 @@ Compliments Results
 
 {% block content %}
 
-<!-- Your HTML code goes here! -->
+<h2>Hello {{ name }}!</h2>
 
+{% if compliments %}
+<h3>I think that you are...</h3>
+<ul>
+    {% for compliment in compliments %}
+    <li>
+        <p>{{ compliment }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Hey no worries, I can always compliment you next time :^)</p>
+{% endif %}
 
 
 {% endblock %}
